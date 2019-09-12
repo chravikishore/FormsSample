@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="card">
+          <div class="card-header">
+            Reactive Forms / Model Driven
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="a">A</label>
+              <input type="number" class="form-control" placeholder="A" formControlName="a">
+            </div>
+            <div class="form-group">
+              <label for="b">B</label>
+              <input type="number" class="form-control" placeholder="B" formControlName="b">
+            </div>
+
+          </div>
+          <div class="card-footer text-muted">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <p>
+        Form Value: {{ profileForm.value | json }}
+      </p>
+      <p>
+        Total Value: {{c}}
+      </p>
+      <p>
+        Form Status: {{ profileForm.status }}
+      </p>
+    </div>
+  </div>
+</div>
